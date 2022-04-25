@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var terminalText: String = ""
+    @State private var terminalText: String = ""
     
     var body: some View {
         ZStack {
@@ -22,8 +22,9 @@ struct ContentView: View {
                 .frame(width: 800, height: 35)
                 Divider()
                 HStack {
-                    TextField(text: $terminalText)
+                    Text("ffff")
                 }
+                .searchable(text: $terminalText)
                 .frame(width: 800, height: 600)
                 .background(Color.brown)
             }
